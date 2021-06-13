@@ -40,6 +40,7 @@ RUN echo $timezone > /etc/timezone \
 
 # Create app dir
 COPY --from=builder /src/app/docker-snowflake /app/
+COPY build/docker/ /app/
 RUN ln -sf /app/docker-snowflake /usr/local/bin/app \
     && chmod +x /app/docker-entrypoint.sh
 WORKDIR /app
