@@ -47,6 +47,6 @@ WORKDIR /app
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
 
-CMD ["app", "env=dev"]
+CMD ["app", "prefork=false"]
 
 EXPOSE 8080
